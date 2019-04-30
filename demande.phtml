@@ -1,0 +1,10 @@
+<form id='form-demande' method='post' name='info' action='demande.php'>
+	<label for='info_sujet'>De:</label>
+	<input id='info_mail' type='text' name='info_mail' class='form-control' value= "<?php echo "".$infoEmail."" ?>" placeholder='adresse mail'>
+				
+	<p><label for='info_sujet'>Sujet:</label>
+	<input id='info_sujet' type='text' name='info_sujet' class='form-control' value="<?= htmlspecialchars($infoSujet) ?>"></p>
+				
+	<p><textarea id='info_demande' name='info_demande' class='form-control'rows='15' cols='80' value='<?= htmlentities($infoDemande) ?>'></textarea></p>
+	<p><input class='layoutsubmit' type="submit" class="btn btn-default" value="Envoyer"></p>
+</form>

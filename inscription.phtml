@@ -1,0 +1,33 @@
+<div id='divFlexInscription'>			
+	<form id='formInscription' method="post" name="register">
+		<label for="register_name"><h3>Nom</h3></label>
+		<input id="register_name" type="text" name="name" class="form-control" placeholder="" value="<?= htmlspecialchars($name) ?>" >
+
+		<label for='register_lastName'><h3>Prénom</h3></label>
+		<input id='register_lastName' type='text' name='lastName' class="form-control" placeholder="" value="<?=htmlspecialchars($lastName) ?>">
+
+		<label for="register_email"><h3>Email</h3></label>
+		<input id="register_email" type="text" name="email" class="form-control" placeholder="" value="<?= htmlspecialchars($email) ?>">
+					
+		<label for='register_password1'><h3>Mot de passe</h3></label>
+		<input id='register_password1' type='password' name= 'password1' class='form-control' placeholder=""> 
+
+		<label for="register_password"><h3>Confirmation du mot de passe</h3></label>
+		<input id="register_password" type="password" name="password" class="form-control" placeholder="">
+ 
+		<input type="hidden" name="csrf_token" value="<?= $randomBytes ?>">
+								
+		<p><input class='layoutsubmit' type="submit" class="btn btn-default" value="Confirmer"></p>
+	</form>	
+	<div id='divSlideInscription'>
+		<section>					
+			<a href='img/photo1.jpeg' class='lightbox' ><img src='img/photo1.jpeg' class='img-inscription'/></a>
+				<a href='img/photo2.jpeg' class='lightbox' ><img src='img/photo2.jpeg' class='img-inscription'/></a>
+				<a href='img/photo3.jpeg' class='lightbox' ><img src='img/photo3.jpeg' class='img-inscription'/></a>
+		</section>
+		<section id='divContainerInscription'>
+			<img src='img/photo2.jpeg'>
+		</section>						
+	</div>	
+</div>
+	

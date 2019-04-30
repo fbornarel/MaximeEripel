@@ -1,0 +1,421 @@
+/*GLOBAL*/
+*{
+	list-style-type: none;
+	text-decoration: none;
+	font-family: 'Exo 2', sans-serif;
+}
+body{
+	margin: auto;
+	font-size: 18px;
+}
+a{
+	color: black;
+}
+input{
+	width: 300px; 
+	height: 27px;
+}
+.layoutsubmit{
+	width: 100px;
+	height: 30px;
+}
+.white{
+	color:white;
+}
+
+/*LAYOUT*/
+/*HEADER*/
+header{
+	background-image: url('background/accueil.png');
+	color: rgb(50,82,82);
+}
+header h1, header h2{
+	margin: 0.5%;
+}
+header h1{
+	font-size: 2.5em;
+}
+/*headerAccueil*/
+#headerAccueil{
+	padding-top: 2%;
+	height: 600px;
+}
+#header-title-accueil{
+	margin: 5% 0% 3% 0%;
+	text-align: center;
+}
+#right-h1-accueil{
+	padding-right: 3%;
+}
+#right-h2-accueil{
+	padding-right: 1%;
+}
+#headerNavAccueil{
+	padding-top: 18%;
+	}
+/*headerGlobal*/
+#headerGlobal{
+	padding-top: 2%;
+	height: 300px;
+}
+#header-title-global{
+	text-align: center;
+	margin: 5% 0% 3% 0%;
+}
+/*nav*/
+#header-nav{
+	padding: 2% 0% 0.2% 0%;
+}
+#header-nav nav ul a{
+    display: inline-block;
+    color: rgb(50,82,82);
+}
+#header-nav nav ul a{
+	font-size: 20px;
+	margin-right: 2%;
+}
+#header-nav nav ul a:hover{
+	color: rgb(171,177,186);
+}
+/*MAIN*/
+.alert-errors{
+	text-align: center;
+	padding-top:2%;
+}
+/*FOOTER*/
+footer{	
+	background-color: rgb(102,102,102);
+	color: rgb(161,176,176);
+}
+footer h2, footer h3{
+	margin: 0;
+}
+#footer{
+	display:flex;
+	justify-content: space-between;
+	background: -moz-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,0.9) 50%, rgba(255,255,255,0) 100%); 
+	background: -webkit-gradient(linear, left top, right top, color-stop(0%,rgba(255,255,255,0)), color-stop(50%,rgba(255,255,255,0.9)), color-stop(100%,rgba(255,255,255,0)));
+}
+#footer-name{
+	padding: 2% 0 0 8%;
+}
+#footer-name a{
+	font-weight: bold;
+	transition-property: font-size;
+	color: rgb(50,82,82);
+}
+#footer-name a:hover{
+	font-size: 25px;
+	transition:1.5s;
+}
+#footer-informations{
+	margin: 5% 8% 0% 0%;
+}
+#footer-informations a{
+	font-weight: bold;
+}
+#mailFooter{
+	color: rgb(50,82,82);
+}
+/*ACCUEIL*/
+#body-accueil{
+	padding-top: 2%;
+}
+#presentation-accueil{
+	margin-bottom: 3%;
+}
+#presentation-accueil p{
+	text-align: center;
+}
+#expertise{
+	font-weight: bold;
+	 margin: 0%;
+}
+#presentation-accueil h3{
+	text-align: center;
+	 margin-bottom: 2%;
+}
+#presentation-accueil span{
+	color: rgb(50,82,82); 
+	font-weight: bold;
+}
+#slider-accueil{
+	display: flex;
+	justify-content: space-around;
+	margin: 6% 10% 6% 10%;	
+}
+#slideA, #slideB{
+	width: 250px;
+	height:300px;
+	position: relative;
+}
+#slideA img, #slideB img{
+	margin: 0;
+	width: 250px;
+	height: 300px;
+	position:absolute;
+	display:none;
+	border-radius: 20%;
+}
+#slideA .active, #slideB .active{
+	display: block;
+}
+#presentation{
+	text-align: justify;
+	font-size: 18px;
+	margin: 4% 15% 0% 15%;
+}
+#citation{
+	font-style: italic;
+	font-weight: bold;
+}
+/*TARIFS*/
+#tarifs{
+	margin-left: auto;
+	margin-right: auto;
+	width: 650px;
+	margin-top: 3%;
+}
+#tarifs table{
+	border-collapse:collapse;
+	border:solid rgb(50,82,82);
+	background-color: rgb(234,234,234);
+	
+	margin: 2% 0% 2% 0%;
+	width: 650px;
+}
+#tarifs table td{
+	padding:10px;
+	border: solid rgb(50,82,82);
+}
+.td-center{
+	text-align: center;
+}
+#tarifs p{
+	margin-left: 5%;
+}
+/*INSCRIPTION*/
+#divFlexInscription{
+	display: flex;
+	justify-content: space-around;
+}
+#formInscription{
+	padding-top: 7%;
+}
+#divSlideInscription{
+	width: 550px;
+	margin-top: 3%;
+}
+#divSlideInscription img{
+	width: 180px;
+	height: 200px;
+	border-radius: 20%;
+}
+#divContainerInscription{
+	text-align: center;
+}
+#divContainerInscription img{
+	width: 300px;
+	height: 300px;	
+}
+/*CONNEXION*/
+#formConnexion{
+	text-align: center;
+	margin: 5% 0% 5% 0%;
+}
+/*DEMANDE*/
+#form-demande{
+	text-align: center;
+	margin: 3% 0% 3% 0%;
+}
+#form-demande label{
+	font-weight: bold;
+}
+#info_mail{
+	margin-left: 1.2%;
+}
+/*RDV*/
+#form_rdv{
+	text-align: center;
+	margin-top: 4%;
+}
+#form_rdv select{
+	font-size: 1em;
+}
+#calendar_rdv{
+	display: flex;
+	justify-content: space-around;
+	margin: 2% 15% 0% 15%;
+}
+#informationsRdv{
+	margin-top: 3%;
+}
+.informationsRdv{
+	margin-top: 1%;
+}
+.informationsRdv input, .informationsRdv textarea{
+	margin-top: 1%;
+}
+
+/*RESPONSIVE*/
+/*TABLETTE*/
+@media (min-width: 768px) and (max-width: 1024px){
+	/*General*/
+	body{
+		font-size: 12px;
+	}
+	#header-nav nav ul a{
+		font-size: 12px;
+	}
+	#footer-informations{
+		margin:7% 2% 0% 0%;
+	}
+	#headerGlobal{
+		background-image: url('background/accueil_tablette.png');	
+	}
+	#header-title-global{
+		margin-top: 15%;
+	}
+	#headerNavGlobal{
+		margin-top: 9%;
+	}
+	/*Accueil*/
+	#headerAccueil{
+		background-image: url('background/accueil_tablette.png');
+		height: 350px;
+	}
+	#header-title-accueil{
+		margin-top: 16%;
+	}
+	#headerNavAccueil{
+		padding-top: 13%;
+		margin-left: 2%;
+	}
+	#body-accueil{
+		height: 850px;
+	}
+	#slider-accueil{
+		margin: 6% 0% 0% 10%;
+	}
+	#slideA img, #slideB img{
+		width: 180px;
+		height: 230px;
+	}
+	#presentation{
+		font-size: 12px;
+		margin: 0% 15% 0% 15%;
+	}
+	#presentation-accueil p{
+		margin:0% 10% 2% 10%;
+	}
+	/*Inscription*/
+	#formInscription{
+		text-align: center;
+	}
+	#divSlideInscription img{
+		width: 120px;
+		height: 140px;
+	}
+	#divContainerInscription img{
+		width: 180px;
+		height: 180px;	
+	}
+	#divFlexInscription{
+		display: block;
+	}
+	#divSlideInscription{
+		display: flex;
+		padding: 6% 0% 6% 12%;
+		width: 750px;
+	}
+	#divContainerInscription{
+		margin-left: 5%;
+	}
+	/*Connexion*/
+	#formConnexion{
+		margin: 10% 0% 66% 0%;
+	}
+	/*Demande*/
+	#form-demande{
+		margin: 10% 0% 41% 0%;
+	}
+	/*Rdv*/
+	#rdv{
+		margin: 10% 0% 35% 0%;
+	}
+}
+/*MOBILE*/
+@media (min-width: 320px) and (max-width: 767px){
+	/*General*/
+	body{
+		font-size: 12px;
+		
+	}
+	#headerGlobal{
+		background-image: url('background/accueil_mobile.png');
+		height: 200px;
+	}
+	#headerNavGlobal{
+		margin-top: 20%;
+	}
+	#header-nav nav ul a{
+		font-size: 10px;
+	}
+	footer{
+		font-size: 8px;
+	}
+	#footer-informations{
+		margin-top: 10%;
+	}
+	/*Accueil*/
+	#headerAccueil{
+	background-image: url('background/accueil_mobile.png');
+	height: 200px;
+	}
+	#header-title-accueil{
+		margin-top: 14%;
+	}
+	#headerNavAccueil{
+		padding-top: 11%;
+	}
+	#body-accueil{
+		height:660px;
+	}
+	#slider-accueil{
+		display: none;
+	}
+	#slideA img, #slideB img{
+		width: 100px;
+		height: 150px;
+		margin:0%;
+	}
+	#presentation-accueil{
+		margin-bottom: 10%;
+	}
+	#presentation{
+		font-size: 12px;
+		margin:0% 2% 0% 2%;
+	}
+	/*Tarifs*/
+	#tarifs{
+		width: 300px;
+	}
+	#tarifs table{
+		font-size: 8px;
+		width: 300px;
+		margin-left:1%;	
+	}
+	/*Inscription*/
+	#divSlideInscription{
+		display: none;
+	}
+	/*Connesion*/
+	#formConnexion{
+		padding-bottom: 34%;
+	}
+	/*Demande*/
+	#form-demande textarea{
+		width: 300px;
+		height: 300px;
+	}
+}

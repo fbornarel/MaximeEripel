@@ -1,0 +1,12 @@
+<form id='formConnexion' method='post' name='connect'>
+	<label for="connect_email"><h3>Email:</h3></label>
+	<input style='height:25px' id="connect_email" type="text" name="email" class="form-control" placeholder="" value="<?= htmlspecialchars($email) ?>">
+					
+	<label for="connect_password"><h3>Mot de passe:</h3></label>
+	<input style='height:25px' id="connect_password" type="password" name="password" class="form-control" placeholder="">
+	
+	<input type="hidden" name="csrf_token" value="<?= $randomBytes ?>">
+					
+	<p><input class='layoutsubmit' type="submit"  value="Confirmer"></p>
+</form>
+

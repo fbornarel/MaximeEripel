@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang='fr'>
+<head>
+	<title>Maxime ERIPEL</title>
+	<meta charset="utf-8"/>
+	<!--CSS font -->
+	<link href="https://fonts.googleapis.com/css?family=Arvo|Exo+2|Lobster" rel="stylesheet">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+	<!--CSS perso -->
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<header>
+		<?php include ($header.'.phtml'); ?>		
+	</header>
+	<main>		
+		<?php if(!empty($errors)): ?>
+	   	<div class='alert-errors'>
+		    <?php foreach($errors as $error): ?>
+		      <?= "<p>$error</p>"; ?>           
+		 		<?php endforeach; ?>
+   		</div>
+		<?php endif ; ?>	  
+		<?php include ($template.'.phtml'); ?>
+	</main>
+	<footer>
+		<div id=footer>
+			<section id='footer-name'>
+				<h2>Maxime Eripel</h2>
+				<h3>Entrepreneur</h3>
+				<p><a href='demande.php'>Contact</a></p>
+			</section>
+			<section id='footer-informations'>
+				<p>Le site MaximeEripel.com à été créé par <a href='mailto: fannybornarel@gmail.com'><span id="mailFooter">Fanny Bornarel</span></a>, développeuse/intégratrice web.</p>
+			</section>
+		</div>	
+	</footer>
+	<!--jquery-->
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+	<!--javascript perso-->
+	<script type="text/javascript" src='main.js'></script>
+</body>
+</html>

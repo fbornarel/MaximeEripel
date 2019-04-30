@@ -1,0 +1,72 @@
+<?php
+setlocale(LC_TIME, 'fr_FR.utf8','fra');
+$date = new Date();
+$year = strftime('%Y');
+$dates = $date->getAll($year);
+$currentMonth = date('n');
+$currentMonth_fr = strftime('%B'); 
+?>
+
+<div id='rdv'>
+	<form  id='form_rdv' method="post" name='calendar_rdv'>
+		<section id='prestation'>	
+			<label for='prestation_option'><p>Veuillez choisir une prestation</p></label>
+				<select id='prestation_option'type='text' name='prestation_option'/>
+					<option value='null' selected="selected">...</option>
+					<option value='Shampoing Brush'>Shampoing Brush</option>
+					<option value='Shampoing Coupe Brush'>Shampoing Coupe Brush</option> 
+					<option value='Shampoing Couleur (racines) Brush'>Shampoing Couleur (racines) Brush</option>
+					<option value='Shampoing Couleur (complète) Brush'>Shampoing Couleur (complète) Brush</option>
+					<option value='Shampoing Couleur (racines) / Coupe Brush'>Shampoing Couleur (racines) / Coupe Brush</option>
+					<option value='Shampoing Balayage / Mèches Brush'>Shampoing Balayage / Mèches Brush</option>
+				</select>
+		</section>
+		<section id='calendar_rdv'>
+			<?php $dates = current($dates); ?>
+			<div class='months'> 
+				<label for='month_option'><p>Veuillez choisir un mois</p></label>
+					<select id="month" class='month_option' name='months' multiple="multiple"/>
+							<option value= 'null' selected="selected">...</option>
+						<?php foreach ($date->months as $id=>$m): ?>						
+							<option  class='linkMonth' id='linkMonth<?php echo $id+1;?>' ><?php echo $m;?></option>	
+						<?php endforeach; ?>						
+					</select>						
+			</div>
+			<div class='days'>	
+				<label for='day_option'><p>Veuillez choisir un jour</p></label>									
+					<?php foreach ($dates as $m => $daysMonth):?>
+						<select class='month' id='month<?php echo $m;?>' name='day_option' multiple='multiple'/>
+							<?php foreach ($daysMonth as $d=>$w ):?>
+								<option value='<?php echo $d; ?>'><?php echo $d;?></option>												
+							<?php endforeach; ?>					
+						</select>		
+					<?php endforeach;?>
+					<input type="hidden" id='date_rdv'name="date">
+			</div>				
+			<div id='planning'>
+				<label for='time_option'><p>Veuillez choisir une heure</p></label>
+				<select class='time' id='time_option' type='time' name='time_option' multiple="multiple"/>
+						<option value='null' selected="selected">...</option>
+					<?php foreach($date->times as $id=>$t):?>
+						<option value='<?php echo $t;?>'><?php echo $t;?></option>
+					<?php endforeach;?>
+				</select>
+			</div>
+		</section>
+		<section id='informationsRdv'>
+			<div class='informationsRdv'>
+				<label for='adreses'>Adresse:</label>
+				<p><input type='text' name='adresse'/></p>
+			</div>
+			<div class='informationsRdv'>
+				<label for='infoAdr'>Informations complémentaires:</label>
+				<p><textarea name='infoAd' placeholder='Bât...Etage...Digicode...'></textarea></p>
+			</div>
+			<div class='informationsRdv'>
+				<label for='phone'>Numéro de téléphone:</label>
+				<p><input type='tel' maxlength='10' minlength='10' pattern="[0-9]{10}" name='phone'/></p>
+			</div>
+		</section>
+			<p style='text-align: center;'><input id="submitRdv" style='margin-top:2%;' class='layoutsubmit' type="submit"  value="Confirmer" ></p>
+	</form>
+</div>

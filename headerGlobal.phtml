@@ -1,0 +1,25 @@
+<div id='headerGlobal'>				
+    <section id='header-title-global'>
+		<h1>Maxime <span class='white'>Eripel</span><span id='right-h1-accueil'></span></h1>
+		<h2>Personal <span class='white'>Hairdresser</span><span id='right-h2-accueil'></span></h2>
+	</section>
+	<section id='header-nav'>
+		<nav id="headerNavGlobal">
+			<ul>
+				<a href='accueil.php'><li>Accueil</li></a>
+				<a href='accueil.php #presentation'><li>Qui suis-je?</li></a>
+				<a href='tarifs.php'><li>Tarifs</li></a>
+
+				<?php if(isset($_SESSION['client_id'])) :?>			
+					<a href='deconnexion.php'>Déconnexion</a>
+				<?php else: ?> 
+					<a href='inscription.php'><li>Inscription</li></a>
+					<a href='connexion.php'><li>Connexion</li></a>								
+				<?php endif; ?>
+	    
+				<a href='demande.php'><li>Demande d'informations</li></a>
+				<a href='rdv.php'><li>Prise de RDV</li></a>								
+			</ul>
+		</nav>
+	</section>
+</div>
